@@ -9,6 +9,6 @@ router.get("/teste", (req, res) => {
   res.send("Hello, World!");
 });
 
-router.post("/cidades", CityController.create); 
+router.post("/cidades", CityController.createBodyValidator, CityController.create); 
 
 export { router };
